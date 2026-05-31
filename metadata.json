@@ -1,0 +1,6 @@
+{
+  "name": "Prisma Creative Studio",
+  "description": "A dark, moody, and cinematic landing page with a warm cream color palette, featuring dynamic typography, custom motion effects, and responsive visual cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
