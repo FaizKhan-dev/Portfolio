@@ -9,54 +9,57 @@ export default function FeaturesSection() {
 
   // Styled segments for top header
   const headerSegmentsLines = [
-    { text: "Selected engineering products & visual assets.", className: "text-[#E1E0CC] block mb-2" },
-    { text: "Bound by elegant component architecture. Driven by clean code.", className: "text-gray-500 block" },
+    { text: "Selected Work & Featured Projects.", className: "text-[#E1E0CC] block mb-2" },
+    { text: "Building full-stack web products, responsive interfaces, and practical software.", className: "text-gray-500 block" },
   ];
-
-  const card1VideoUrl =
-    "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4";
 
   // Real projects checklist mappings
-  const asasaChecklist = [
-    "Sole developer on official asasatech.com agency web application",
-    "Translating complex Figma layouts into high-performance React",
-    "Architecting smooth cross-browser responsive layouts",
-    "Fully custom-designed transitions using Tailwind animations",
-  ];
-
   const retregoChecklist = [
-    "Shipped interactive e-commerce layouts directly to active users",
-    "Seamless integration of secure RESTful backend API endpoints",
-    "Collaborative Agile development, peer code reviews, and Git flow",
+    "Contributed production frontend features to live e-commerce platform",
+    "Integrated REST APIs and handled responsive UI states across application",
+    "Built reusable components focused on performance and usability",
+    "Worked in Agile team with Git workflows and code reviews",
   ];
 
-  const smartChecklist = [
-    "Dukan Manager: Supabase automated stock track & PDF data report",
-    "YouTube Summarizer: Python backend with transcript extraction & NLP",
-    "Intuitive inventory layouts for non-technical shop owners",
+  const innosphereChecklist = [
+    "Built modern software and technology business website",
+    "Developed clean, responsive frontend layouts with modern web standards",
+    "Focused on product engineering, performance, and user interaction",
+  ];
+
+  const betproChecklist = [
+    "Developed interactive web application interfaces and dynamic data flows",
+    "Implemented responsive UI components and state management",
+    "Focused on clean frontend architecture and API integration",
+  ];
+
+  const githubChecklist = [
+    "More experiments, projects, and open-source work available on GitHub",
+    "Full-stack applications, API integrations, and database projects",
+    "AI-powered tools, automation scripts, and utility repositories",
   ];
 
   // Grouped Technical Skills
   const skillCategories = [
     {
-      title: "Languages",
-      icon: <Code className="w-4 h-4 text-primary" />,
-      skills: ["JavaScript (ES6+)", "TypeScript", "Python", "HTML5/CSS3"]
-    },
-    {
-      title: "Frontend Core",
+      title: "Core & Frontend",
       icon: <Layout className="w-4 h-4 text-primary" />,
-      skills: ["React.js", "Next.js", "Tailwind CSS", "Redux Toolkit", "Vite"]
+      skills: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "HTML5/CSS3"]
     },
     {
-      title: "Backend & Storage",
+      title: "Backend & APIs",
       icon: <Database className="w-4 h-4 text-primary" />,
-      skills: ["FastAPI", "MySQL", "MongoDB", "Supabase", "Node.js (basic)"]
+      skills: ["Python", "FastAPI", "REST APIs", "Node.js", "Databases", "Supabase", "Appwrite"]
     },
     {
-      title: "AI & Tooling",
+      title: "AI Capabilities",
       icon: <BrainCircuit className="w-4 h-4 text-primary" />,
-      skills: ["LangChain", "OpenAI APIs", "YouTube Data API", "Git/GitHub", "Figma"]
+      skills: ["Generative AI", "LangChain", "CrewAI", "Gemini API", "Groq", "Ollama", "AI APIs"]
+    },
+    {
+      title: "Engineering Tools",
+      icon: <Code className="w-4 h-4 text-primary" />,
+      skills: ["Git & GitHub", "Agile Workflow", "Figma to Code", "Vite", "RESTful Architecture"]
     }
   ];
 
@@ -103,7 +106,7 @@ export default function FeaturesSection() {
           />
         </div>
 
-        {/* 4-Column Card Grid with real user achievements */}
+        {/* 4-Column Card Grid featuring priority projects */}
         <motion.div
           ref={containerRef}
           variants={gridVariants}
@@ -113,115 +116,31 @@ export default function FeaturesSection() {
           id="features-grid"
         >
           
-          {/* Card 1: Studio Theme video looping */}
+          {/* Card 1: Priority 1 - Retrego */}
           <motion.div
             variants={cardVariants}
-            className="relative lg:h-[480px] h-[360px] md:h-[400px] overflow-hidden rounded-2xl border border-white/5 bg-[#212121] flex flex-col justify-end p-6 group cursor-pointer shadow-lg shadow-black/40"
+            className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
             id="feature-card-1"
-          >
-            <video
-              src={card1VideoUrl}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-              id="feature-card-video"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 pointer-events-none" />
-            <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-            {/* Subtle top indicator for visual uniformity */}
-            <div className="absolute top-6 left-6 right-6 flex justify-between items-start z-10">
-              <span className="text-[10px] font-mono font-medium uppercase tracking-[0.15em] text-[#DEDBC8]/50">
-                Core Ethos
-              </span>
-              <span className="font-mono text-xs text-[#DEDBC8]/40">Active</span>
-            </div>
-
-            <div className="relative z-10 select-none pb-2" id="card-1-label">
-              <h4 className="text-lg sm:text-xl font-medium tracking-tight text-[#E1E0CC] group-hover:text-white transition-colors duration-300">
-                Shaping interfaces with total pixel fidelity.
-              </h4>
-            </div>
-          </motion.div>
-
-          {/* Card 2: Asasa Tech Agency Website */}
-          <motion.div
-            variants={cardVariants}
-            className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
-            id="feature-card-2"
-          >
-            <div className="flex flex-col gap-5">
-              <div className="flex justify-between items-start">
-                <img
-                  src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85"
-                  alt="Asasa Tech icon"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover border border-white/10"
-                  referrerPolicy="no-referrer"
-                  id="card-2-icon"
-                />
-                <span className="font-mono text-xs text-gray-500 group-hover:text-primary/70 transition-colors duration-300">
-                  01 · Corporate
-                </span>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium tracking-tight text-[#E1E0CC] mb-4 group-hover:text-white transition-colors duration-300">
-                  Asasa Tech Website
-                </h4>
-                <ul className="space-y-3" id="card-2-list">
-                  {asasaChecklist.map((item, idx) => (
-                    <li key={idx} className="flex gap-2.5 items-start">
-                      <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" strokeWidth={3} />
-                      <span className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-normal">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <a
-              href="https://asasatech.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs sm:text-sm font-medium text-primary cursor-pointer select-none no-underline"
-              id="card-2-learn"
-            >
-              <span className="group-hover:text-white transition-colors duration-300">Visit Live site</span>
-              <div className="w-7 h-7 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-500">
-                <ArrowRight className="w-3.5 h-3.5 transform -rotate-45 group-hover:text-black transition-transform duration-500" />
-              </div>
-            </a>
-          </motion.div>
-
-          {/* Card 3: Retrego E-Commerce Platform */}
-          <motion.div
-            variants={cardVariants}
-            className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
-            id="feature-card-3"
           >
             <div className="flex flex-col gap-5">
               <div className="flex justify-between items-start">
                 <img
                   src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85"
-                  alt="Retrego icon"
+                  alt="Retrego logo"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover border border-white/10"
                   referrerPolicy="no-referrer"
-                  id="card-3-icon"
+                  id="card-1-icon"
                 />
                 <span className="font-mono text-xs text-gray-500 group-hover:text-primary/70 transition-colors duration-300">
-                  02 · Platform
+                  01 · E-Commerce Platform
                 </span>
               </div>
 
               <div>
                 <h4 className="text-lg font-medium tracking-tight text-[#E1E0CC] mb-4 group-hover:text-white transition-colors duration-300">
-                  Retrego Platform
+                  Retrego
                 </h4>
-                <ul className="space-y-3" id="card-3-list">
+                <ul className="space-y-3" id="card-1-list">
                   {retregoChecklist.map((item, idx) => (
                     <li key={idx} className="flex gap-2.5 items-start">
                       <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" strokeWidth={3} />
@@ -235,20 +154,122 @@ export default function FeaturesSection() {
             </div>
 
             <a
-              href="https://retrego.com"
+              href="https://www.retrego.com"
               target="_blank"
               rel="noopener noreferrer"
               className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs sm:text-sm font-medium text-primary cursor-pointer select-none no-underline"
-              id="card-3-learn"
+              id="card-1-learn"
             >
-              <span className="group-hover:text-white transition-colors duration-300">Explore platform</span>
+              <span className="group-hover:text-white transition-colors duration-300">Visit retrego.com</span>
               <div className="w-7 h-7 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-500">
                 <ArrowRight className="w-3.5 h-3.5 transform -rotate-45 group-hover:text-black transition-transform duration-500" />
               </div>
             </a>
           </motion.div>
 
-          {/* Card 4: Smart Systems & Tools */}
+          {/* Card 2: Priority 2 - Innosphere */}
+          <motion.div
+            variants={cardVariants}
+            className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
+            id="feature-card-2"
+          >
+            <div className="flex flex-col gap-5">
+              <div className="flex justify-between items-start">
+                <img
+                  src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85"
+                  alt="Innosphere logo"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover border border-white/10"
+                  referrerPolicy="no-referrer"
+                  id="card-2-icon"
+                />
+                <span className="font-mono text-xs text-gray-500 group-hover:text-primary/70 transition-colors duration-300">
+                  02 · Web Studio
+                </span>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-medium tracking-tight text-[#E1E0CC] mb-4 group-hover:text-white transition-colors duration-300">
+                  Innosphere
+                </h4>
+                <ul className="space-y-3" id="card-2-list">
+                  {innosphereChecklist.map((item, idx) => (
+                    <li key={idx} className="flex gap-2.5 items-start">
+                      <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" strokeWidth={3} />
+                      <span className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-normal">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href="https://www.innosphere.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs sm:text-sm font-medium text-primary cursor-pointer select-none no-underline"
+              id="card-2-learn"
+            >
+              <span className="group-hover:text-white transition-colors duration-300">Visit innosphere.studio</span>
+              <div className="w-7 h-7 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-500">
+                <ArrowRight className="w-3.5 h-3.5 transform -rotate-45 group-hover:text-black transition-transform duration-500" />
+              </div>
+            </a>
+          </motion.div>
+
+          {/* Card 3: Priority 3 - BetProExchange */}
+          <motion.div
+            variants={cardVariants}
+            className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
+            id="feature-card-3"
+          >
+            <div className="flex flex-col gap-5">
+              <div className="flex justify-between items-start">
+                <img
+                  src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85"
+                  alt="BetProExchange logo"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover border border-white/10"
+                  referrerPolicy="no-referrer"
+                  id="card-3-icon"
+                />
+                <span className="font-mono text-xs text-gray-500 group-hover:text-primary/70 transition-colors duration-300">
+                  03 · Web Application
+                </span>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-medium tracking-tight text-[#E1E0CC] mb-4 group-hover:text-white transition-colors duration-300">
+                  BetProExchange
+                </h4>
+                <ul className="space-y-3" id="card-3-list">
+                  {betproChecklist.map((item, idx) => (
+                    <li key={idx} className="flex gap-2.5 items-start">
+                      <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" strokeWidth={3} />
+                      <span className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-normal">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href="https://www.betproexchange.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs sm:text-sm font-medium text-primary cursor-pointer select-none no-underline"
+              id="card-3-learn"
+            >
+              <span className="group-hover:text-white transition-colors duration-300">Visit betproexchange.site</span>
+              <div className="w-7 h-7 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-500">
+                <ArrowRight className="w-3.5 h-3.5 transform -rotate-45 group-hover:text-black transition-transform duration-500" />
+              </div>
+            </a>
+          </motion.div>
+
+          {/* Card 4: GitHub Repositories & Open Source */}
           <motion.div
             variants={cardVariants}
             className="lg:h-[480px] bg-[#212121] border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-[#DEDBC8]/25 hover:shadow-xl hover:shadow-black/65 transition-all duration-500 shadow-md shadow-black/30"
@@ -256,24 +277,20 @@ export default function FeaturesSection() {
           >
             <div className="flex flex-col gap-5">
               <div className="flex justify-between items-start">
-                <img
-                  src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85"
-                  alt="Dukan Manager icon"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded object-cover border border-white/10"
-                  referrerPolicy="no-referrer"
-                  id="card-4-icon"
-                />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
                 <span className="font-mono text-xs text-gray-500 group-hover:text-primary/70 transition-colors duration-300">
-                  03 · Intelligence
+                  04 · Open Source & Labs
                 </span>
               </div>
 
               <div>
                 <h4 className="text-lg font-medium tracking-tight text-[#E1E0CC] mb-4 group-hover:text-white transition-colors duration-300">
-                  Smart Systems
+                  GitHub Repositories
                 </h4>
                 <ul className="space-y-3" id="card-4-list">
-                  {smartChecklist.map((item, idx) => (
+                  {githubChecklist.map((item, idx) => (
                     <li key={idx} className="flex gap-2.5 items-start">
                       <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" strokeWidth={3} />
                       <span className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-normal">
@@ -292,7 +309,7 @@ export default function FeaturesSection() {
               className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs sm:text-sm font-medium text-primary cursor-pointer select-none no-underline"
               id="card-4-learn"
             >
-              <span className="group-hover:text-white transition-colors duration-300">View source repos</span>
+              <span className="group-hover:text-white transition-colors duration-300">Explore GitHub Repos</span>
               <div className="w-7 h-7 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-500">
                 <ArrowRight className="w-3.5 h-3.5 transform -rotate-45 group-hover:text-black transition-transform duration-500" />
               </div>
@@ -305,10 +322,10 @@ export default function FeaturesSection() {
         <div className="w-full border-t border-white/5 pt-16 flex flex-col gap-8 relative z-10" id="tech-profile-workbench">
           <div className="flex flex-col gap-2">
             <span className="text-[10px] uppercase font-mono tracking-widest text-[#DEDBC8]/50 block">
-              Core Capabilities
+              Capabilities
             </span>
             <h3 className="text-xl md:text-2xl font-medium tracking-tight text-[#E1E0CC]">
-              Technical Stack & Workbench
+              Technical Stack
             </h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="skills-grid-layout">
@@ -341,26 +358,26 @@ export default function FeaturesSection() {
           </div>
         </div>
 
-        {/* Elegant Inquiry Section (Footer block) so that Nav links scroll down smoothly */}
+        {/* Contact & Inquiries Section */}
         <div
           className="border-t border-white/5 pt-16 mt-8 flex flex-col md:flex-row justify-between gap-12 text-gray-500"
-          id="inquiries"
+          id="contact"
         >
           <div className="flex flex-col gap-4">
             <h5 className="font-serif italic text-[#E1E0CC] text-2xl" id="inquiries-head text">
-              Initiate connection. Let's build.
+              Let's work together.
             </h5>
             <p className="text-xs text-gray-400 max-w-sm leading-relaxed font-sans" id="inquiries-text font">
-              Open to standard roles, creative agency partnerships, and remote collaborative production teams worldwide. Let's turn design maps into seamless interactive reality.
+              Open to software engineering roles, full-stack and frontend positions, and remote development opportunities worldwide. Feel free to reach out.
             </p>
             <div className="flex flex-col gap-2 mt-4 text-xs font-mono text-[#E1E0CC]/80" id="inquiries-address line">
               <a
-                href="mailto:imfzkhn@gmail.com"
+                href="mailto:work.faizkhan.se@gmail.com"
                 className="flex items-center gap-2 hover:text-[#DEDBC8] transition-colors duration-300 no-underline"
                 id="email-trigger"
               >
                 <Mail className="w-3.5 h-3.5 text-primary" />
-                <span>imfzkhn@gmail.com</span>
+                <span>work.faizkhan.se@gmail.com</span>
               </a>
               <a
                 href="tel:+923072921182"

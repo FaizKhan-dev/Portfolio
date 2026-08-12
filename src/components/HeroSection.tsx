@@ -9,9 +9,9 @@ interface HeroSectionProps {
 export default function HeroSection({ onNavClick }: HeroSectionProps) {
   // Navigation items
   const navItems = [
-    { label: "Profile", target: "about" },
-    { label: "Selected Works", target: "features" },
-    { label: "Inquiries", target: "inquiries" },
+    { label: "About", target: "about" },
+    { label: "Selected Work", target: "features" },
+    { label: "Contact", target: "contact" },
   ];
 
   return (
@@ -114,12 +114,12 @@ export default function HeroSection({ onNavClick }: HeroSectionProps) {
                 }}
                 id="hero-description"
               >
-                Faiz Khan is a remote Frontend Developer and Creative Engineer dedicated to crafting performance-driven, pixel-perfect user interfaces with React, TypeScript, and modern AI pipelines.
+                Software engineer focused on building full-stack web products, with a strong foundation in modern frontend development and hands-on experience with AI, APIs, and backend systems.
               </motion.p>
 
-              {/* CTA Button "Initiate inquiry" */}
+              {/* CTA Button "Let's work together" */}
               <motion.button
-                onClick={() => onNavClick("inquiries")}
+                onClick={() => onNavClick("contact")}
                 className="group flex items-center justify-between gap-2.5 pl-5 pr-1.5 py-1.5 bg-primary hover:bg-[#fffdf0] text-black font-medium text-xs sm:text-sm rounded-full transition-all duration-500 cursor-pointer shadow-lg shadow-black/30 hover:shadow-primary/10 hover:gap-3.5"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function HeroSection({ onNavClick }: HeroSectionProps) {
                 }}
                 id="cta-join-lab"
               >
-                <span>Initiate inquiry</span>
+                <span>Let's work together</span>
                 <span className="flex items-center justify-center bg-black hover:bg-neutral-900 rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-500 transform group-hover:scale-110">
                   <ArrowRight
                     className="w-4 h-4 text-[#DEDBC8] transition-transform duration-500"

@@ -3,37 +3,48 @@ import ScrollRevealText from "./ScrollRevealText";
 import { Briefcase, GraduationCap, Award, MapPin } from "lucide-react";
 
 export default function AboutSection() {
-  // Configured segments for Faiz Khan's creative introduction
+  // Configured segments for Faiz Khan's introduction
   const headingSegments = [
     { text: "I am Faiz Khan, ", className: "font-normal text-[#E1E0CC]" },
-    { text: "a creative frontend engineer. ", className: "font-serif italic text-primary" },
+    { text: "a software engineer and builder. ", className: "font-serif italic text-primary" },
     {
-      text: "I build responsive performance-driven user interfaces and interactive web platforms.",
+      text: "I build full-stack web products, thoughtful interfaces, and practical software with modern web technologies.",
       className: "font-normal text-[#E1E0CC]",
     },
   ];
 
   const experienceList = [
     {
+      role: "Software Engineer",
+      company: "Innosphere",
+      period: "Current",
+      badge: "Remote · Software Engineer",
+      details: [
+        "Focusing on software engineering, web development, and building real-world products",
+        "Developing responsive interfaces, integrating APIs, and building full-stack web applications",
+        "Collaborating on web architecture, design implementation, and product deployment"
+      ]
+    },
+    {
       role: "Frontend Developer",
       company: "Asasa Tech",
-      period: "Feb 2026 – Apr 2026",
+      period: "Dec 2025 – Jun 2026",
       badge: "Remote · Sole Web Developer",
       details: [
-        "Independently designed and built full frontend of company's live agency web application (asasatech.com)",
-        "Constructed clean reusable component structures and optimized cross-browser compatibility end-to-end",
-        "Pioneered modern performance layers to drive fluid, high-conversion visual pipelines"
+        "Designed and built the frontend of the company's live website from the ground up",
+        "Built reusable components and responsive layouts with modern frontend practices",
+        "Focused on usability, performance, and maintaining a consistent visual system across the site"
       ]
     },
     {
       role: "Software Engineering Intern",
       company: "Asasa Tech",
-      period: "Sep 2025 – Jan 2026",
+      period: "Sep 2025 – Nov 2025",
       badge: "Remote · E-Commerce Team",
       details: [
-        "Contributed production frontend code deployed to thousands of real shopping users at retrego.com",
-        "Integrated robust RESTful API endpoints and designed responsive layout states",
-        "Participated daily in active Agile sprints, structured QA feedback loops, and Git reviews"
+        "Contributed frontend features to Retrego, a live e-commerce platform",
+        "Integrated REST APIs and handled responsive UI states across the application",
+        "Worked with Git, code reviews, QA feedback, and an Agile development workflow"
       ]
     }
   ];
@@ -55,7 +66,7 @@ export default function AboutSection() {
           className="text-primary tracking-[0.2em] text-[10px] sm:text-xs uppercase font-medium mb-6 sm:mb-8 block"
           id="about-label"
         >
-          Visual Profiling
+          A Little About Me
         </span>
 
         {/* Main large heading with multi-style words pull-up */}
@@ -72,7 +83,7 @@ export default function AboutSection() {
         {/* Scroll link character reveal paragraph */}
         <div className="max-w-3xl text-center mb-16 md:mb-24" id="about-body-wrapper">
           <ScrollRevealText
-            text="Over the last few years, I have engineered and shipped production code for established platforms, working in highly collaborative structures. From standalone agency deployments to live high-traffic retail carts, visual precision and responsive performance guide every keystroke."
+            text="I enjoy taking an idea from a rough concept to something people can actually use. My work has taken me from frontend development and API integration to full-stack applications, databases, and AI-powered features. I learn by building, and I care about writing software that is useful, maintainable, and built to grow."
             className="text-primary text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose"
           />
         </div>
@@ -85,7 +96,7 @@ export default function AboutSection() {
             <div className="flex items-center gap-3">
               <Briefcase className="w-5 h-5 text-primary" />
               <h3 className="text-lg md:text-xl font-medium tracking-tight text-[#E1E0CC]">
-                Professional Milestones
+                Experience
               </h3>
             </div>
 
@@ -131,7 +142,7 @@ export default function AboutSection() {
               <div className="flex items-center gap-3">
                 <GraduationCap className="w-5 h-5 text-primary" />
                 <h3 className="text-lg md:text-xl font-medium tracking-tight text-[#E1E0CC]">
-                  Academic Foundation
+                  Education
                 </h3>
               </div>
               <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/25 transition-all duration-500">
@@ -139,7 +150,7 @@ export default function AboutSection() {
                   Expected Graduation: 2027
                 </span>
                 <h4 className="text-sm font-semibold text-[#E1E0CC] mb-1">
-                  BS in Software Engineering
+                  BS Software Engineering
                 </h4>
                 <p className="text-xs text-primary/80 mb-2">
                   Sindh Madressatul Islam University
@@ -149,7 +160,7 @@ export default function AboutSection() {
                     <MapPin className="w-3 h-3 text-primary/60" />
                     Karachi, Pakistan
                   </span>
-                  <span className="text-[#E1E0CC]">CGPA 3.3 / 4.0</span>
+                  <span className="text-[#E1E0CC]">CGPA 3.5 / 4.0</span>
                 </div>
               </div>
             </div>
@@ -159,7 +170,7 @@ export default function AboutSection() {
               <div className="flex items-center gap-3">
                 <Award className="w-5 h-5 text-primary" />
                 <h3 className="text-lg md:text-xl font-medium tracking-tight text-[#E1E0CC]">
-                  Credentials
+                  Certification
                 </h3>
               </div>
               <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/25 transition-all duration-500 flex gap-4 items-start">
@@ -168,7 +179,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <span className="font-mono text-[10px] text-gray-500 block">
-                    AWS Cloud Certification
+                    AWS Certification
                   </span>
                   <h4 className="text-sm font-semibold text-[#E1E0CC] mt-0.5">
                     AI Essentials
