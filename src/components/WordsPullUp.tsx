@@ -7,6 +7,7 @@ interface WordsPullUpProps {
   className?: string;
   delayOffset?: number;
   style?: any;
+  align?: "left" | "center";
 }
 
 export default function WordsPullUp({
@@ -15,16 +16,18 @@ export default function WordsPullUp({
   className = "",
   delayOffset = 0,
   style = {},
+  align = "center",
 }: WordsPullUpProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-10% 0px" });
 
   const words = text.split(" ");
+  const justifyClass = align === "left" ? "justify-start text-left" : "justify-center";
 
   return (
     <div
       ref={containerRef}
-      className={`inline-flex flex-wrap justify-center ${className}`}
+      className={`inline-flex flex-wrap ${justifyClass} ${className}`}
       style={style}
       id="words-pull-up-container"
     >

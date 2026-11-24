@@ -33,31 +33,46 @@ interface ScrollRevealTextProps {
 }
 
 export default function ScrollRevealText({ text, className = "" }: ScrollRevealTextProps) {
-  const containerRef = useRef<HTMLParagraphElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 0.8", "end 0.2"],
   });
 
-  const chars = text.split("");
-  const totalChars = chars.length;
+  const paragraphs = text.split("\n\n").filter(Boolean);
+  const totalChars = paragraphs.reduce((sum, p) => sum + p.length, 0);
+
+  let runningIndex = 0;
 
   return (
-    <p
+    <div
       ref={containerRef}
-      className={`${className} leading-relaxed tracking-wider text-center`}
+      className="flex flex-col gap-5 text-center"
       id="scroll-reveal-text"
     >
-      {chars.map((char, index) => (
-        <AnimatedLetter
-          key={index}
-          char={char}
-          index={index}
-          totalChars={totalChars}
-          progress={scrollYProgress}
-        />
-      ))}
-    </p>
+      {paragraphs.map((paragraph, pIndex) => {
+        const chars = paragraph.split("");
+        const startOffset = runningIndex;
+        runningIndex += chars.length;
+
+        return (
+          <p
+            key={pIndex}
+            className={`${className} leading-relaxed tracking-wider text-center`}
+          >
+            {chars.map((char, cIndex) => (
+              <AnimatedLetter
+                key={cIndex}
+                char={char}
+                index={startOffset + cIndex}
+                totalChars={totalChars}
+                progress={scrollYProgress}
+              />
+            ))}
+          </p>
+        );
+      })}
+    </div>
   );
 }

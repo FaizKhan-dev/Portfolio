@@ -90,12 +90,22 @@ export default function HeroSection({ onNavClick }: HeroSectionProps) {
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end w-full">
             {/* Left 8 columns: Giant Heading */}
-            <div className="lg:col-span-8 flex flex-col" id="hero-heading-col">
-              <span className="sr-only">Faiz Khan</span>
+            <div className="lg:col-span-8 flex flex-col items-start" id="hero-heading-col">
+              <motion.span
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="text-primary/80 tracking-[0.2em] text-[10px] sm:text-xs uppercase font-medium mb-3 sm:mb-4 select-none"
+                id="hero-name-eyebrow"
+              >
+                Faiz Khan
+              </motion.span>
+              <h1 className="sr-only">Faiz Khan — Software Engineer &amp; Builder.</h1>
               <WordsPullUp
-                text="Faiz Khan"
+                text="Software Engineer & Builder."
                 showAsterisk={true}
-                className="font-medium leading-[0.85] tracking-[-0.07em] select-none text-[13vw] sm:text-[12vw] md:text-[10vw] lg:text-[9.5vw] xl:text-[9vw] 2xl:text-[9vw]"
+                align="left"
+                className="font-medium leading-[0.95] tracking-[-0.05em] select-none text-[10.5vw] sm:text-[9vw] md:text-[7.5vw] lg:text-[5.8vw] xl:text-[5.5vw] 2xl:text-[5.2vw]"
                 style={{ color: "#E1E0CC" }}
               />
             </div>
@@ -104,7 +114,7 @@ export default function HeroSection({ onNavClick }: HeroSectionProps) {
             <div className="lg:col-span-4 flex flex-col items-start gap-6 sm:gap-8 xl:pl-4" id="hero-cta-col">
               {/* Description Paragraph */}
               <motion.p
-                className="text-primary/70 text-xs sm:text-sm xl:text-base leading-[1.25] text-left pr-4"
+                className="text-primary/70 text-xs sm:text-sm xl:text-base leading-[1.35] text-left pr-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -114,7 +124,7 @@ export default function HeroSection({ onNavClick }: HeroSectionProps) {
                 }}
                 id="hero-description"
               >
-                Software engineer focused on building full-stack web products, with a strong foundation in modern frontend development and hands-on experience with AI, APIs, and backend systems.
+                I turn business problems into practical software, AI-powered workflows, and products people can use.
               </motion.p>
 
               {/* CTA Button "Let's work together" */}
